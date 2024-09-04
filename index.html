@@ -7,69 +7,128 @@
 <link rel="stylesheet" href="stylesheet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Rubik:ital,wght@0,300..900;1,300..900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
 <style>
+  .flex-container {
+            height: 125px;
+            background-color: rgb(174, 189, 147);
+            display:flex;
+            border-bottom: 1px solid #7A8450;
+  }
+  .flex-main {
+            flex-grow: 5;
+            padding-left: 29px;
+        }
+  .flex-sidebar {
+      flex-grow: 5;
+      padding: 20px;
+  }
+  nav {
+    padding-left: 500px;
+    padding-top: 18px;
+  }
+  section {
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 75px;
+  }
   .lovers-quarrel-regular {
-  font-family: "Lovers Quarrel", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: "Lovers Quarrel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
   .simonetta-regular {
-  font-family: "Simonetta", serif;
+    font-family: "Simonetta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .simonetta-black {
+    font-family: "Simonetta", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(76, 46, 5);
+  }
+
+  .simonetta-regular-italic {
+    font-family: "Simonetta", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .simonetta-black-italic {
+    font-family: "Simonetta", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+.rubik-regular {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
-.simonetta-black {
-  font-family: "Simonetta", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.simonetta-regular-italic {
-  font-family: "Simonetta", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.simonetta-black-italic {
-  font-family: "Simonetta", serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 
 </style>
 </head>
-<body>
+<body style="background-color: #EDF3EC;">
 
-<!-- Sidebar 
-<nav style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-    <a href="About" style="border: solid 95969d; border-radius: 2px;" class="simonetta-black">About</a>
-    <a href="Work" style="border: solid 95969d; border-radius: 2px;" class="simonetta-black">Work</a>
-    <a href="Contact" style="border: solid 95969d; border-radius: 2px;" class="simonetta-black">Contact</a>
-</nav>-->
-
-<!-- Page Content -->
-<div>
-
-  <!-- Header -->
-  <header id="home">
-    <h1 class="lovers-quarrel-regular"><b>Amanda Cowan</b></h1>
-    <button style="border: solid 95969d; border-radius: 2px;">
-      <a href="About" class="simonetta-black">About</a>
-    </button>
-    <button style="border: solid 95969d; border-radius: 2px;">
-      <a href="Work" class="simonetta-black">Work</a>
-    </button>
-    <button style="border: solid 95969d; border-radius: 2px;">
-      <a href="Contact" class="simonetta-black">Contact</a>
-    </button>
-  </header>
+<!-- Heading for the page, including the navigation -->
+<div class="flex-container">
+  <div class="flex-main">
+    <h1 class="lovers-quarrel-regular" 
+      style="color: rgb(76, 46, 5); font-size: 72px;">
+      <b>Amanda Cowan</b>
+    </h1>
+  </div>
+  <div class="flex-sidebar">
+    <nav>
+      <button onclick="location.href='About'" 
+        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px; 
+          padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;" 
+        class="simonetta-black">
+        About
+      </button>
+      <button onclick="document.location='Work.html'"
+        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
+          padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
+        class="simonetta-black">
+        Work
+      </button>
+      <button onclick="document.location='Contact.html'"
+        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
+          padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
+        class="simonetta-black">
+        Contact
+      </button>
+    </nav>
+  </div>
   
-<!-- END PAGE CONTENT -->
+<!-- End of Heading -->
 </div>
+
+<!--About Section!-->
+<div>
+  <section id="About">
+    <h1 class="simonetta-black" style="font-size: 30px; padding-right: 700px;">Creative | Filmmaker & Designer</h1>
+    <div style="position: relative; left: 200px; width: 800px; border: none; background-color: rgba(149, 150, 157, 0.5); padding: 100px;"><p>Self-Made Art Later</p></div>
+    <div style="padding-top: 20px;">
+      <p class="rubik-regular" style="color:rgb(76, 46, 5)">
+        My name is Amanda Cowan and I am a third year Computational Media major candidate at the Georgia 
+        Institute of Technology, with Media and Film & Media Studies as my selected threads. 
+        Additionally, I have a minor in Russian to help further my understanding and connection to global cultures.
+        Outside of class, I spend much of my time crocheting, reading, and watching movies! 
+        I find that watching film and television help me to understand others based on the stories that people choose to tell.
+        Feel free to link with me on 
+        <a href="https://letterboxd.com/aforabandon/">
+          Letterboxd
+        </a>!
+      </p></div>
+  </section>
+</div>
+  
 
 </body>
 </html>
