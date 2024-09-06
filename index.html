@@ -7,31 +7,153 @@
 <link rel="stylesheet" href="stylesheet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Rubik:ital,wght@0,300..900;1,300..900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
 <style>
   .flex-container {
             height: 125px;
-            background-color: rgb(174, 189, 147);
             display:flex;
-            border-bottom: 1px solid #7A8450;
   }
+
   .flex-main {
             flex-grow: 5;
             padding-left: 29px;
         }
+
   .flex-sidebar {
       flex-grow: 5;
       padding: 20px;
   }
+
   nav {
     padding-left: 500px;
     padding-top: 18px;
   }
+
   section {
     padding-top: 50px;
     padding-left: 100px;
     padding-right: 75px;
   }
+
+  /*
+     The following was used to create a collapsible list
+     of skills in the 'Work' section.
+  */
+
+  .collapsible {
+    background-color: rgba(149, 150, 157, 0.5);
+    color:rgb(76, 46, 5);
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    border: none;
+    border-radius: 12px;
+    text-align: left;
+    outline: none;
+    font-size: 32;
+  }
+
+  .active, .collapsible:hover {
+    background-color: #CACACE;
+  }
+
+  .collapsible:after {
+    content: '\23F5';
+    color: rgb(76, 46, 5);
+    padding-right: 20px;
+    float: left;
+    margin-left: 3px;
+  }
+
+  .active:after {
+    content: '\23F7';
+  }
+
+  .content {
+    padding: 0 18px;
+    padding-top: 0px;
+    width: 500px;
+    border-radius: 12px;
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #CACACE;
+    color: rgb(76, 46, 5);
+  }
+
+  /*
+    The following CSS helps to create the slideshow gallery in 'Work'
+  */
+  .container {
+    position:relative;
+  }
+
+  .slides {
+    display: none;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color:#EDF3EC;
+    font-size: 15px;
+    border-radius: 0 10px 10px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(76, 46, 5, 0.5);
+  }
+
+  .caption-container {
+    text-align: left;
+    background-color: rgba(76, 46, 5, 0.5);
+    padding: 2px 5px;
+    color:#EDF3EC;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 16.66%
+  }
+
+  .thumbnail {
+    opacity: 0.6;
+  }
+
+  .active,
+  .thumbnail:hover {
+    opacity: 1;
+  }
+
+
+  /*All CSS below is for the various fonts, of which there are three families:
+  *        - Lovers Quarrel: Used for name in top corner and extra embellishment
+  *        - Simonetta: Used for headers, specifically Simonetta Black
+  *        - Prompt: Used for general text throughout
+  */
   .lovers-quarrel-regular {
     font-family: "Lovers Quarrel", cursive;
     font-weight: 400;
@@ -63,12 +185,112 @@
     font-style: italic;
   }
 
+  .prompt-thin {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
-.rubik-regular {
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
+.prompt-extralight {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.prompt-light {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.prompt-regular {
+  font-family: "Prompt", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.prompt-medium {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.prompt-semibold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.prompt-bold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.prompt-extrabold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.prompt-black {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.prompt-thin-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.prompt-extralight-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.prompt-light-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.prompt-regular-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.prompt-medium-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.prompt-semibold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.prompt-bold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.prompt-extrabold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.prompt-black-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
 </style>
@@ -76,7 +298,7 @@
 <body style="background-color: #EDF3EC;">
 
 <!-- Heading for the page, including the navigation -->
-<div class="flex-container">
+<div class="flex-container" style="background-color: rgb(174, 189, 147); border-bottom: 1px solid #7A8450;">
   <div class="flex-main">
     <h1 class="lovers-quarrel-regular" 
       style="color: rgb(76, 46, 5); font-size: 72px;">
@@ -115,7 +337,7 @@
     <h1 class="simonetta-black" style="font-size: 30px; padding-right: 700px;">Creative | Filmmaker & Designer</h1>
     <div style="position: relative; left: 200px; width: 800px; border: none; background-color: rgba(149, 150, 157, 0.5); padding: 100px;"><p>Self-Made Art Later</p></div>
     <div style="padding-top: 20px;">
-      <p class="rubik-regular" style="color:rgb(76, 46, 5)">
+      <p class="prompt-medium" style="color:rgb(76, 46, 5)">
         My name is Amanda Cowan and I am a third year Computational Media major candidate at the Georgia 
         Institute of Technology, with Media and Film & Media Studies as my selected threads. 
         Additionally, I have a minor in Russian to help further my understanding and connection to global cultures.
@@ -123,12 +345,140 @@
         I find that watching film and television help me to understand others based on the stories that people choose to tell.
         Feel free to link with me on 
         <a href="https://letterboxd.com/aforabandon/">
-          Letterboxd
-        </a>!
+          Letterboxd!
+        </a>
       </p></div>
   </section>
 </div>
-  
+
+<!--Work Section!-->
+<div class="flex-container">
+  <section id="Work">
+    <h1 class="simonetta-black" style="font-size: 50px; padding-right: 700px; padding-top: 100px">Work</h1>
+    <div class="flex-main">
+      <!--Holds Collapsible List-->
+      <button class="collapsible prompt-medium" style="font-size: 24px;">Film</button>
+      <div class="content prompt-medium">
+        This is my experience in Film! I will fill this out in detail later :&#41;
+      </div>
+      <button class="collapsible prompt-medium" style="font-size: 24px;">Photography</button>
+      <div class="content prompt-medium">
+        This is my experience in Photography! I will also fill later
+      </div>
+      <button class="collapsible prompt-medium" style="font-size: 24px;">Design</button>
+      <div class="content prompt-medium">
+        You KNOW I'm writing about Yanni's class in this section!
+      </div>
+    </div>
+    
+    <div class="flex-sidebar">
+      <!--Holds Photo Gallery-->
+      <div class="container">
+        <div class="slides">
+          <img src="/Photography/boston1.jpg" style="width:100%">
+        </div>
+
+        <div class="slides">
+          <img src="/Photography/england1.JPG" style="width:100%">
+        </div>
+
+        <div class="slides">
+          <img src="/Photography/iceland1.jpg" style="width:100%">
+        </div>
+
+        <div class="slides">
+          <img src="/Photography/LA1.jpg" style="width:100%">
+        </div>
+
+        <div class="slides">
+          <img src="/Photography/LV1.jpg" style="width:100%">
+        </div>
+
+        <div class="slides">
+          <img src="/Photography/paris1.JPG" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="row">
+          <div class="column">
+            <img class="thumbnail cursor prompt-regular" src="/Photography/boston1.jpg"
+              onclick="currentSlide(1)" alt="Boston">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor prompt-regular" src="/Photography/england1.JPG"
+              onclick="currentSlide(1)" alt="London Bridge">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor prompt-regular" src="/Photography/iceland1.jpg"
+              onclick="currentSlide(1)" alt="Iceland">
+          </div>
+          <div class="column">
+            <img class="thumbnail cursor prompt-regular" src="/Photography/LA1.jpg"
+              onclick="currentSlide(1)" alt="Los Angeles">
+          </div>
+          <div class="column"></div>
+            <img class="thumbnail cursor prompt-regular" src="/Photography/LV1.jpg"
+              onclick="currentSlide(1)" alt="Las Vegas">
+          </div>
+          <div class="column"></div>
+            <img class="thumbnail cursor prompt-regular" src="/Photography/paris1.JPG"
+              onclick="currentSlide(1)" alt="Paris">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--JavaScript Portion!
+    Used to animate the Collapsible toggle list in the Work section.
+    Used to enable the slideshow gallery in the Work section.-->
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
 </body>
 </html>
