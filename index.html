@@ -156,6 +156,10 @@
     opacity: 1;
   }
 
+  .navigation:hover {
+    opacity: 0.5;
+  }
+
 
   /*All CSS below is for the various fonts, of which there are three families:
   *        - Lovers Quarrel: Used for name in top corner and extra embellishment
@@ -315,22 +319,22 @@
   </div>
   <div class="flex-sidebar">
     <nav>
-      <button onclick="href='About'" 
+      <button onclick="document.location='#About'" 
         style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px; 
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;" 
-        class="simonetta-black">
+        class="simonetta-black cursor navigation">
         About
       </button>
-      <button onclick="document.location='Work.html'"
+      <button onclick="document.location='#Work'"
         style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
-        class="simonetta-black">
+        class="simonetta-black cursor navigation">
         Work
       </button>
-      <button onclick="document.location='Contact.html'"
+      <button onclick="document.location='#Contact'"
         style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
-        class="simonetta-black">
+        class="simonetta-black cursor navigation">
         Contact
       </button>
     </nav>
@@ -360,8 +364,8 @@
 </div>
 
 <!--Work Section!-->
-<div id="Work">
-  <h1 class="simonetta-black" style="font-size: 50px; padding-left: 100px; padding-top: 100px">Work</h1>
+<div id="Work" style="padding-bottom: 250px;">
+  <h1 class="simonetta-black" style="font-size: 50px; padding-left: 100px; padding-top: 100px;">Work</h1>
   <div class="flex-container" style="height: 300px;">
     <div class="flex-main" style="padding-left: 100px; padding-top: 50px;">
       <!--Holds Collapsible List-->
@@ -440,6 +444,18 @@
       </div>
     </div>
   </div>
+</div>
+
+<!--Contact Section!-->
+<div id="Contact" style="background-color: #7A8450; padding-top: 50px;">
+  <h1 class="simonetta-black" style="background-color: #edf3ecab; font-size: 50px; padding-left: 100px;">Contact</h1>
+    <div style="padding-top: 20px; padding-bottom: 100px;">
+      <p class="prompt-medium" style="color:rgb(76, 46, 5); padding-left: 200px;">
+        Email: <a href="mailto: amandac23121@gmail.com">amandac23121@gmail.com</a> <br>
+        LinkedIn: <a href="https://www.linkedin.com/in/amanda-cowan-9978b525a/">Amanda Cowan</a> <br>
+        Letterboxd: <a href="https://letterboxd.com/aforabandon/">@aforabandon</a> <br>
+        Instagram: <a href="https://www.instagram.com/ac.far_from_home/?next=%2F">@ac.far_from_home</a> <br>
+      </p></div>
 </div>
 
 <!--JavaScript Portion!
