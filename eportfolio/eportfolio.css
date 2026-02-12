@@ -208,6 +208,7 @@ img {
   padding: 1em;
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 #sidebar h2,
@@ -318,6 +319,7 @@ img {
 #page_content .section .file_list .instTree .leaf.active {
   background-color: #ddd;
   -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 #page_content .section.read_only div.section_content {
