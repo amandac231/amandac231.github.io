@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="stylesheet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
 <style>
   .flex-container {
             height: 125px;
@@ -25,7 +25,7 @@
   }
 
   nav {
-    padding-left: 500px;
+    padding-left: 400px;
     padding-top: 18px;
   }
 
@@ -46,7 +46,7 @@
     cursor: pointer;
     padding: 18px;
     width: 500px;
-    border: none;
+    border-color: #7A8450;
     border-radius: 12px;
     text-align: left;
     outline: none;
@@ -156,6 +156,10 @@
     opacity: 1;
   }
 
+  .navigation {
+    clip-path: shape(from 0 0,curve to 15% 4% with 10% 4%,curve to 25% 2% with 20% 4%,curve to 35% 5% with 30% 0%,curve to 45% 11.5% with 40% 10%,curve to 55% 7% with 50% 13%,curve to 65% 5% with 60% 1%,curve to 75% 6% with 70% 9%,curve to 85% 3% with 80% 3%,curve to 100% 0 with 90% 3%,vline to 100%,curve to 85% 97.5% with 90% 100%,curve to 75% 97% with 80% 95%,curve to 65% 95% with 70% 99%,curve to 55% 94% with 60% 91%,curve to 45% 92.5% with 50% 97%,curve to 35% 93.5% with 40% 88%,curve to 25% 93.5% with 30% 99%,curve to 15% 88.5% with 20% 88%,curve to 0 100% with 10% 89%,vline to 0);
+  }
+
   .navigation:hover {
     opacity: 0.5;
   }
@@ -166,36 +170,6 @@
   *        - Simonetta: Used for headers, specifically Simonetta Black
   *        - Prompt: Used for general text throughout
   */
-  .lovers-quarrel-regular {
-    font-family: "Lovers Quarrel", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .simonetta-regular {
-    font-family: "Simonetta", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .simonetta-black {
-    font-family: "Simonetta", serif;
-    font-weight: 900;
-    font-style: normal;
-    color: rgb(76, 46, 5);
-  }
-
-  .simonetta-regular-italic {
-    font-family: "Simonetta", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  .simonetta-black-italic {
-    font-family: "Simonetta", serif;
-    font-weight: 900;
-    font-style: italic;
-  }
 
   .prompt-thin {
   font-family: "Prompt", sans-serif;
@@ -305,36 +279,43 @@
     font-style: italic;
   }
 
+  .spline-sans-bold {
+    font-family: "Spline Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
 </style>
 </head>
-<body style="background-color: #EDF3EC;">
+<body>
 
 <!-- Heading for the page, including the navigation -->
-<div class="flex-container" style="background-color: rgb(174, 189, 147); border-bottom: 1px solid #7A8450;">
+<div class="flex-container">
   <div class="flex-main">
-    <h1 class="lovers-quarrel-regular" 
-      style="color: rgb(76, 46, 5); font-size: 72px;">
+    <h1 class="prompt-semibold" 
+      style="font-size: 54px; padding-left: 10px; overflow: hidden; white-space: nowrap; padding-top: 15px;">
       <b>Amanda Cowan</b>
     </h1>
   </div>
   <div class="flex-sidebar">
     <nav>
       <button onclick="document.location='#About'" 
-        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px; 
+        style="border: none; border-radius: 5px; background-color: #7C6A0A; font-size: 24px; color: #FFDAC6;
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;" 
-        class="simonetta-black cursor navigation">
+        class="spline-sans-bold cursor navigation">
         About
       </button>
       <button onclick="document.location='#Work'"
-        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
+        style="border: none; border-radius: 5px; background-color: #7C6A0A; font-size: 24px; color: #FFDAC6;
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
-        class="simonetta-black cursor navigation">
+        class="spline-sans-bold cursor navigation">
         Work
       </button>
       <button onclick="document.location='#Contact'"
-        style="border: none; border-radius: 80px; background-color: rgba(149, 150, 157, 0.5); font-size: 24px;
+        style="border: none; border-radius: 5px; background-color: #7C6A0A; font-size: 24px; color: #FFDAC6;
           padding-top: 7px; padding-bottom: 7px; padding-left: 20px; padding-right: 20px;"
-        class="simonetta-black cursor navigation">
+        class="spline-sans-bold cursor navigation">
         Contact
       </button>
     </nav>
@@ -346,10 +327,16 @@
 <!--About Section!-->
 <div>
   <section id="About">
-    <h1 class="simonetta-black" style="font-size: 30px; padding-right: 700px;">Creative | Filmmaker & Designer</h1>
-    <div style="position: relative; left: 200px; width: 800px; border: none; background-color: rgba(149, 150, 157, 0.5); padding: 100px;"><p>Self-Made Art Later</p></div>
-    <div style="padding-top: 20px;">
-      <p class="prompt-medium" style="color:rgb(76, 46, 5)">
+    <h1 class="spline-sans-bold" style="font-size: 30px; position: absolute; z-index: -1; margin-right: 400px;
+      padding-right: 400px; padding-left: 30px; padding-top: 15px; padding-bottom: 15px;
+      background-color: #EB6424; color:#FFDAC6">
+      Creative | Filmmaker & Designer</h1>
+    <div style="position: relative; left: 200px; width: 800px; border: none; background-color: #BABD8D; 
+      padding: 100px; margin-top: 100px; margin-left: 70px;">
+      <p>Self-Made Art Later</p>
+    </div>
+    <div style="padding-top: 20px; padding-left: 30px;">
+      <p class="prompt-regular" style="color:rgb(76, 46, 5)">
         My name is Amanda Cowan and I am a third year Computational Media major candidate at the Georgia 
         Institute of Technology, with Media and Film & Media Studies as my selected threads. 
         Additionally, I have a minor in Russian to help further my understanding and connection to global cultures.
@@ -365,20 +352,20 @@
 
 <!--Work Section!-->
 <div id="Work" style="padding-bottom: 250px;">
-  <h1 class="simonetta-black" style="font-size: 50px; padding-left: 100px; padding-top: 100px;">Work</h1>
+  <h1 class="spline-sans-bold" style="font-size: 50px; padding-left: 100px; padding-top: 100px;">Work</h1>
   <div class="flex-container" style="height: 300px;">
     <div class="flex-main" style="padding-left: 100px; padding-top: 50px;">
       <!--Holds Collapsible List-->
       <button class="collapsible prompt-medium" style="font-size: 24px;">Film</button>
-      <div class="content prompt-medium">
+      <div class="content prompt-regular">
         This is my experience in Film! I will fill this out in detail later :&#41;
       </div>
       <button class="collapsible prompt-medium" style="font-size: 24px;">Photography</button>
-      <div class="content prompt-medium">
+      <div class="content prompt-regular">
         This is my experience in Photography! I will also fill later
       </div>
       <button class="collapsible prompt-medium" style="font-size: 24px;">Design</button>
-      <div class="content prompt-medium">
+      <div class="content prompt-regular">
         You KNOW I'm writing about Yanni's class in this section!
       </div>
     </div>
@@ -448,7 +435,7 @@
 
 <!--Contact Section!-->
 <div id="Contact" style="background-color: #7A8450; padding-top: 50px;">
-  <h1 class="simonetta-black" style="background-color: #edf3ecab; font-size: 50px; padding-left: 100px;">Contact</h1>
+  <h1 class="spline-sans-bold" style="background-color: #edf3ecab; font-size: 50px; padding-left: 100px;">Contact</h1>
     <div style="padding-top: 20px; padding-bottom: 100px;">
       <p class="prompt-medium" style="color:rgb(76, 46, 5); padding-left: 200px;">
         Email: <a href="mailto: amandac23121@gmail.com">amandac23121@gmail.com</a> <br>
